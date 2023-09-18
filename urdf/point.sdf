@@ -1,0 +1,25 @@
+<sdf version='1.7'>
+<model name="point_model">
+	<link name="point">
+		<inertial>
+			<pose>0 0 0 0 0 0</pose>
+	    <mass>5</mass>
+	  </inertial>
+    <collision name='point_collision'>
+    	<pose>0 0 0 0 0 0</pose>
+      <geometry>
+      	<sphere>
+        	<radius>0.01</radius>
+        </sphere>
+      </geometry>
+  	</collision>
+  	<visual name='point_visual'>
+    	<pose>0 0 0 0 0 0</pose>
+      <geometry>
+      	<sphere>
+        	<radius>0.01</radius>
+        </sphere>
+      </geometry>
+  	</visual>
+	</link>
+</model>

@@ -1,0 +1,22 @@
+<launch>
+  <param
+    name="robot_description"
+    textfile="$(find delta)/urdf/delta.urdf" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+  </include>
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find delta)/urdf/delta.urdf -urdf -model delta -z 1"
+    output="screen" />
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+        output="screen"
+        args="-sdf
+              -file $(find delta)/urdf/delta.sdf 
+              -model delta
+              -x 0.15 -y 1 -z 0.4"/>
+              
+</launch>

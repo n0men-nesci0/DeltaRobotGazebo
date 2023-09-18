@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="delta">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.380382316067151 -0.533525806735634 0.659302816292224"
+        rpy="0 0 0" />
+      <mass
+        value="156.163072577183" />
+      <inertia
+        ixx="7.59889681143528"
+        ixy="9.24660486503918E-05"
+        ixz="-0.000259409545019098"
+        iyy="7.59824264740178"
+        iyz="0.000102275137498802"
+        izz="10.3617884952824" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm1u_link">
+    <inertial>
+      <origin
+        xyz="0.114792252146982 0.00182152585989531 0.0495423331065887"
+        rpy="0 0 0" />
+      <mass
+        value="0.646884412038515" />
+      <inertia
+        ixx="0.000166776951356192"
+        ixy="-0.000187543246495444"
+        ixz="-4.04262175422229E-09"
+        iyy="0.00675559133337473"
+        iyz="6.15021016035575E-11"
+        izz="0.00677709143476231" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm1u_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm1u_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm1u_joint"
+    type="revolute">
+    <origin
+      xyz="0.332874358144467 -0.683521580995339 0.398756986704061"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm1u_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm1l_link">
+    <inertial>
+      <origin
+        xyz="-9.97813808795156E-05 0.196248527207172 -0.336949565440713"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921516517186" />
+      <inertia
+        ixx="0.0162938612187847"
+        ixy="1.24793553857067E-09"
+        ixz="7.0953299675545E-10"
+        iyy="0.0125763002148967"
+        iyz="0.00683803746277884"
+        izz="0.00372712094804493" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm1l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm1l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm1l_joint"
+    type="revolute">
+    <origin
+      xyz="0.28 0.03 0.0475"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="arm1u_link" />
+    <child
+      link="arm1l_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="spider_link">
+    <inertial>
+      <origin
+        xyz="-5.38458166943201E-15 0.00734510079557238 2.69635425098613E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.207397112440021" />
+      <inertia
+        ixx="0.000172568881403432"
+        ixy="9.71381190011689E-20"
+        ixz="3.43716993501032E-19"
+        iyy="0.000277154102529209"
+        iyz="3.89811485296466E-13"
+        izz="0.00017256884108883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/spider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/spider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="spider_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.430000000000003 -0.693897506840888"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="arm1l_link" />
+    <child
+      link="spider_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="arm2u_link">
+    <inertial>
+      <origin
+        xyz="0.114792190956305 -0.00182152531048962 -0.0251673198673809"
+        rpy="0 0 0" />
+      <mass
+        value="0.646883970811699" />
+      <inertia
+        ixx="0.000166776836705843"
+        ixy="0.000187543268799504"
+        ixz="3.2150157847923E-09"
+        iyy="0.00675558779094135"
+        iyz="3.68581726073319E-11"
+        izz="0.00677708810261764" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm2u_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm2u_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2u_joint"
+    type="revolute">
+    <origin
+      xyz="0.26203 -0.43849 0.39876"
+      rpy="1.5708 0 2.618" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm2u_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm2l_link">
+    <inertial>
+      <origin
+        xyz="4.98873597500338E-05 0.196166188619494 -0.336994118830087"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921516970152" />
+      <inertia
+        ixx="0.0162937848310827"
+        ixy="-4.33135285554664E-08"
+        ixz="-2.28771318440279E-08"
+        iyy="0.0125763583473423"
+        iyz="0.00683807013781495"
+        izz="0.00372713928386159" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0.015 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm2l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0.015 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm2l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2l_joint"
+    type="revolute">
+    <origin
+      xyz="0.28 -0.03 -0.023125"
+      rpy="1.9005 1.5708 -2.7977" />
+    <parent
+      link="arm2u_link" />
+    <child
+      link="arm2l_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm3u_link">
+    <inertial>
+      <origin
+        xyz="0.114792221305797 -0.0018215276521994 0.184356660884916"
+        rpy="0 0 0" />
+      <mass
+        value="0.646884127953809" />
+      <inertia
+        ixx="0.000166777031838413"
+        ixy="0.00018754343528482"
+        ixz="4.36611667923892E-09"
+        iyy="0.00675559025398928"
+        iyz="7.91226247389733E-11"
+        izz="0.00677709036650219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm3u_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm3u_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm3u_joint"
+    type="revolute">
+    <origin
+      xyz="0.417078668164106 -0.297095310806117 0.398756986704061"
+      rpy="1.5707963267949 0 0.523598775598305" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm3u_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm3l_link">
+    <inertial>
+      <origin
+        xyz="6.68770569014487E-05 0.196297587644045 -0.336923472185262"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921517454708" />
+      <inertia
+        ixx="0.0162938220391309"
+        ixy="1.34163498613678E-08"
+        ixz="6.18717760626569E-09"
+        iyy="0.0125763293786619"
+        iyz="0.00683805476278882"
+        izz="0.00372713113058198" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm3l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.01 -0.01"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/arm3l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm3l_joint"
+    type="revolute">
+    <origin
+      xyz="0.28 -0.03 0.1864"
+      rpy="-1.6655 1.5708 -0.094749" />
+    <parent
+      link="arm3u_link" />
+    <child
+      link="arm3l_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
