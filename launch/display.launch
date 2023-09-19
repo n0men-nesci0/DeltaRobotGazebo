@@ -3,7 +3,7 @@
     name="model" />
   <param
     name="robot_description"
-    textfile="$(find delta)/urdf/delta_origin.urdf" />
+    textfile="$(find delta)/urdf/.urdf" />
   <node
     name="joint_state_publisher_gui"
     pkg="joint_state_publisher_gui"
@@ -18,3 +18,4 @@
     type="rviz"
     args="-d $(find delta)/urdf.rviz -f base_link" />
 </launch>
+

@@ -8,7 +8,7 @@
 
 
 #define ANGULAR_VELOCITY 0.2
-#define EPS 0.001
+#define EPS 0.0001
 #define TIME_INTERVAL 3
 
 

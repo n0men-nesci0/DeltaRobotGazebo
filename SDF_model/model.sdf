@@ -1,9 +1,12 @@
 <sdf version='1.7'>
   <model name='delta'>
+    <plugin name="delta_calc" filename="libdelta_calc.so"/>
+    <plugin name="delta_control" filename="libdelta_control.so"/>
+
     <link name='base_link'>
-      <inertial>
+      <inertial>  
         <pose>0.380382 -0.533526 0.659303 0 0 0</pose>
-        <mass>156.163</mass>
+        <mass>160</mass>
         <inertia>
           <ixx>7.5989</ixx>
           <ixy>9.2466e-05</ixy>
@@ -40,8 +43,8 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>3.1416</upper>
+          <lower>-0.5</lower>
+          <upper>2.6</upper>
           <effort>0</effort>
           <velocity>0</velocity>
         </limit>
@@ -55,7 +58,7 @@
       <pose relative_to='arm1u_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.114792 0.001822 0.049542 0 0 0</pose>
-        <mass>0.646884</mass>
+        <mass>1</mass>
         <inertia>
           <ixx>0.000166777</ixx>
           <ixy>-0.000187543</ixy>
@@ -93,7 +96,7 @@
       <pose relative_to='arm11_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.0055 0.1848 -0.33693 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.00814693</ixx>
           <ixy>-4.92928e-05</ixy>
@@ -156,7 +159,7 @@
       <pose relative_to='arm11_spider_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.032 0.055 0.002345 0 0 0</pose>
-        <mass>0.207397</mass>
+        <mass>0.2</mass>
         <inertia>
           <ixx>0.000172569</ixx>
           <ixy>-4.07679e-19</ixy>
@@ -194,7 +197,7 @@
       <pose relative_to='arm12_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>-0.005 0.186209 -0.33697 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.00814693</ixx>
           <ixy>4.9294e-05</ixy>
@@ -230,8 +233,8 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.1416</lower>
-          <upper>0</upper>
+          <lower>-2.6</lower>
+          <upper>0.5</upper>
           <effort>0</effort>
           <velocity>0</velocity>
         </limit>
@@ -245,7 +248,7 @@
       <pose relative_to='arm2u_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.114792 -0.001822 -0.025167 0 0 0</pose>
-        <mass>0.646884</mass>
+        <mass>1</mass>
         <inertia>
           <ixx>0.000166777</ixx>
           <ixy>0.000187543</ixy>
@@ -283,7 +286,7 @@
       <pose relative_to='arm21_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.005 0.186173 -0.336989 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.0081469</ixx>
           <ixy>-4.92996e-05</ixy>
@@ -321,7 +324,7 @@
       <pose relative_to='arm22_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>-0.005 0.186159 -0.336999 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.00814688</ixx>
           <ixy>4.92563e-05</ixy>
@@ -357,8 +360,8 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <lower>-3.1416</lower>
-          <upper>0</upper>
+          <lower>-2.6</lower>
+          <upper>0.5</upper>
           <effort>0</effort>
           <velocity>0</velocity>
         </limit>
@@ -372,7 +375,7 @@
       <pose relative_to='arm3u_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.114792 -0.001822 0.184357 0 0 0</pose>
-        <mass>0.646884</mass>
+        <mass>1</mass>
         <inertia>
           <ixx>0.000166777</ixx>
           <ixy>0.000187543</ixy>
@@ -410,7 +413,7 @@
       <pose relative_to='arm31_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.005 0.186343 -0.336898 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.00814688</ixx>
           <ixy>-4.92603e-05</ixy>
@@ -448,7 +451,7 @@
       <pose relative_to='arm32_joint'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>-0.005 0.186252 -0.336949 0 0 0</pose>
-        <mass>0.127461</mass>
+        <mass>0.1</mass>
         <inertia>
           <ixx>0.00814694</ixx>
           <ixy>4.92737e-05</ixy>
@@ -477,6 +480,5 @@
         </geometry>
       </visual>
     </link>
-    <plugin name="delta_plugin" filename="libdelta_plugin.so"/>
   </model>
 </sdf>
